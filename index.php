@@ -1,3 +1,3 @@
 <?php
-echo "Hello, XAMPP is workin= yaya!";
+echo "Test 12";
 ?>
