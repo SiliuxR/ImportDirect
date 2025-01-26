@@ -8,13 +8,13 @@
 
 <body>
     <?php
-    $carName = "2001 Mazda RX-7 Spirit R";
-    $carImage = "https://m.atcdn.co.uk/a/media/w1024/9d5418a0eef24fe097505c53789ab995.jpg";
-    $year = 2001;
+    $carName = "1996 Toyota Supra MK4";
+    $carImage = "https://m.atcdn.co.uk/a/media/w1024/8dd2691bd66e4862a02222d9b338815d.jpg";
+    $year = 1999;
     $fuelType = "Petrol";
     $transmission = "Manual";
-    $engine = "1.3L Twin-Rotor Wankel Engine";
-    $features = "5-Speed Manual Transmission<br>Rear Wheel Drive";
+    $engine = "3.0L Inline 6 Cylinder Twin-Turbo";
+    $features = "6-Speed Manual Transmission<br>Rear Wheel Drive System";
     ?>
 
     <div class="details-container">
