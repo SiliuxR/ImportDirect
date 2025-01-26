@@ -24,6 +24,7 @@
             "image" => "https://m.atcdn.co.uk/a/media/w1024/5dbbd8c27a314403836cfd83f8a91725.jpg",
             "detailsPage" => "Rotary.php"
         ]
+
     ];
     ?>
 
