@@ -32,6 +32,7 @@
 
         <a href="#" class="enquire-button">Enquire Now</a>
     </div>
+
 </body>
 
 </html>
