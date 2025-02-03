@@ -8,13 +8,13 @@
 
 <body>
     <?php
-    $carName = "1999 Nissan Skyline GT-R R34";
-    $carImage = "https://m.atcdn.co.uk/a/media/w1024/96c9433c71be4b3cb1b0f48f53622d6b.jpg";
-    $year = 1999;
+    $carName = "2009 Nissan  GT-R";
+    $carImage = "https://m.atcdn.co.uk/a/media/w1024/5b0d5adbf82d48b3bfbe481dd947b313.jpg";
+    $year = 2009;
     $fuelType = "Petrol";
-    $transmission = "Manual";
-    $engine = "2.6L Inline 6 Cylinder Twin-Turbo";
-    $features = "6-Speed Manual Transmission<br>All Wheel Drive System";
+    $transmission = "Automatic";
+    $engine = "3.8L V-6";
+    $features = "6-Speed Automatic Transmission<br>All Wheel Drive";
     ?>
 
     <div class="details-container">
@@ -32,7 +32,6 @@
 
         <a href="enquiry.php" class="enquire-button">Enquire Now</a>
     </div>
-
 </body>
 
 </html>

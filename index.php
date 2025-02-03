@@ -48,9 +48,9 @@
                 "detailsPage" => "Rotary.php"
             ],
             [
-                "name" => "2001 Mazda RX-7",
-                "image" => "https://m.atcdn.co.uk/a/media/w1024/5dbbd8c27a314403836cfd83f8a91725.jpg",
-                "detailsPage" => "Rotary.php"
+                "name" => "2009 Nissan GT-R",
+                "image" => "https://m.atcdn.co.uk/a/media/w1024/5b0d5adbf82d48b3bfbe481dd947b313.jpg",
+                "detailsPage" => "Godzilla.php"
             ]
         ];
 
