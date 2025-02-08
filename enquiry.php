@@ -9,28 +9,26 @@
 <body>
 
     <?php
-    $carName = $_GET['car'] ?? "Unknown Car";
+    $carName = $_GET['car'] ?? "";
     ?>
 
     <div class="form-container">
         <h2>Enquire About <?= htmlspecialchars(string: $carName) ?></h2>
 
-        <form action="submit_enquiry.php" method="POST">
-            <input type="hidden" name="car" value="<?= htmlspecialchars(string: $carName) ?>">
-
+        <form action="submit-enquiry.php" method="POST">
             <label for="first_name">First Name:</label>
-            <input type="text" id="first_name" name="first_name" required>
+            <input type="text" name="first_name" required>
 
             <label for="last_name">Last Name:</label>
-            <input type="text" id="last_name" name="last_name" required>
+            <input type="text" name="last_name" required>
 
             <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+            <input type="email" name="email" required>
 
             <label for="phone">Phone Number:</label>
-            <input type="tel" id="phone" name="phone" required>
+            <input type="tel" name="phone" required>
 
-            <button type="submit" class="submit-button">Submit</button>
+            <button type="submit">Submit Enquiry</button>
         </form>
     </div>
 
