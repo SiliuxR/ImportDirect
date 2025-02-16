@@ -8,13 +8,13 @@
 
 <body>
     <?php
-    $carName = "2009 Nissan  GT-R";
-    $carImage = "https://m.atcdn.co.uk/a/media/w1024/5b0d5adbf82d48b3bfbe481dd947b313.jpg";
-    $year = 2009;
+    $carName = "2005 Subaru Impreza WRX Turbo";
+    $carImage = "https://m.atcdn.co.uk/a/media/w1024/0b64675a502448c680d3f628d95fcf92.jpg";
+    $year = 2005;
     $fuelType = "Petrol";
-    $transmission = "Automatic";
-    $engine = "3.8L V-6";
-    $features = "6-Speed Automatic Transmission<br>All Wheel Drive";
+    $transmission = "Manual";
+    $engine = "2.0L Turbo Flat 4 Cylinder Boxer Engine";
+    $features = "5-Speed Manual Transmission<br>All Wheel Drive System";
     ?>
 
     <div class="details-container">

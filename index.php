@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -19,6 +18,12 @@
     <div class="search-bar-container">
         <input type="text" class="search-bar" placeholder="Search for cars...">
         <button class="search-button">Search</button>
+    </div>
+
+    <div class="Menu">
+        <a href="enquiries.php" class="menu-button">View Enquiries</a>
+        <a href="login.php" class="menu-button">Login</a>
+        <a href="signup.php" class="menu-button">Sign Up</a>
     </div>
 
 
@@ -51,6 +56,11 @@
                 "name" => "2009 Nissan GT-R",
                 "image" => "https://m.atcdn.co.uk/a/media/w1024/5b0d5adbf82d48b3bfbe481dd947b313.jpg",
                 "detailsPage" => "Godzilla.php"
+            ],
+            [
+                "name" => "2005 Subaru Impreza WRX Turbo",
+                "image" => "https://m.atcdn.co.uk/a/media/w1024/0b64675a502448c680d3f628d95fcf92.jpg",
+                "detailsPage" => "Impreza.php"
             ]
         ];
 

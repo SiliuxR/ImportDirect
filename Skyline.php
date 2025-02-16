@@ -30,7 +30,7 @@
         <p><strong>Engine:</strong> <?= $engine ?></p>
         <p><?= $features ?></p>
 
-        <a href="enquiry.php" class="enquire-button">Enquire Now</a>
+        <a href="enquiry.php?car=<?= urlencode(string: $carName) ?>" class="enquire-button">Enquire Now</a>
     </div>
 
 </body>
