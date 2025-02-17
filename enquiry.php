@@ -14,7 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     exit();
 }
 
-$car = isset($_GET['car']) ? $_GET['car'] : "Unknown Car";
+$car = isset($_GET['car']) ? $_GET['car'] : '';
 ?>
 
 <!DOCTYPE html>
