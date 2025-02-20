@@ -1,4 +1,10 @@
+<?php
+session_start();
+require 'db_connection.php';
+?>
+
 <!DOCTYPE html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -20,56 +26,43 @@
         <button class="search-button">Search</button>
     </div>
 
-    <div class="Menu">
-        <a href="enquiries.php" class="menu-button">View Enquiries</a>
-        <a href="login.php" class="menu-button">Login</a>
-        <a href="signup.php" class="menu-button">Sign Up</a>
+    <div class="menu-container">
+        <h3>Navigation</h3>
+        <div class="Menu">
+            <a href="enquiries.php" class="menu-button">View Enquiries</a>
+
+            <?php if (isset($_SESSION["user"])): ?>
+                <a href="logout.php" class="menu-button">Logout (<?= htmlspecialchars(string: $_SESSION["user"]) ?>)</a>
+            <?php else: ?>
+                <a href="login.php" class="menu-button">Login</a>
+                <a href="signup.php" class="menu-button">Sign Up</a>
+            <?php endif; ?>
+        </div>
     </div>
 
-
-    <div class="nav-buttons">
-        <button>All Cars</button>
-        <button>New Cars</button>
-        <button>Lowest Price</button>
-        <button>Highest Price</button>
+    <div class="filter-container">
+        <h3>Filter Cars</h3>
+        <div class="nav-buttons">
+            <button>All Cars</button>
+            <button>New Cars</button>
+            <button>Lowest Price</button>
+            <button>Highest Price</button>
+        </div>
     </div>
 
     <div class="car-container">
         <?php
-        $cars = [
-            [
-                "name" => "1996 Toyota Supra MK4",
-                "image" => "https://m.atcdn.co.uk/a/media/w1024/8dd2691bd66e4862a02222d9b338815d.jpg",
-                "detailsPage" => "Supra.php"
-            ],
-            [
-                "name" => "1999 Nissan Skyline GT-R R34",
-                "image" => "https://m.atcdn.co.uk/a/media/w1024/96c9433c71be4b3cb1b0f48f53622d6b.jpg",
-                "detailsPage" => "Skyline.php"
-            ],
-            [
-                "name" => "2001 Mazda RX-7",
-                "image" => "https://m.atcdn.co.uk/a/media/w1024/5dbbd8c27a314403836cfd83f8a91725.jpg",
-                "detailsPage" => "Rotary.php"
-            ],
-            [
-                "name" => "2009 Nissan GT-R",
-                "image" => "https://m.atcdn.co.uk/a/media/w1024/5b0d5adbf82d48b3bfbe481dd947b313.jpg",
-                "detailsPage" => "Godzilla.php"
-            ],
-            [
-                "name" => "2005 Subaru Impreza WRX Turbo",
-                "image" => "https://m.atcdn.co.uk/a/media/w1024/0b64675a502448c680d3f628d95fcf92.jpg",
-                "detailsPage" => "Impreza.php"
-            ]
-        ];
+        $query = "SELECT * FROM cars";
+        $stmt = $pdo->query($query);
+        $cars = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
         foreach ($cars as $car): ?>
             <div class="car-item">
-                <a href="<?= $car['detailsPage'] ?>">
-                    <img src="<?= $car['image'] ?>" alt="<?= $car['name'] ?>">
+                <a href="<?= htmlspecialchars($car['details_page']) ?>">
+                    <img src="<?= htmlspecialchars($car['image_url']) ?>" alt="<?= htmlspecialchars($car['name']) ?>">
                 </a>
-                <h2><?= $car['name'] ?></h2>
+                <h2><?= htmlspecialchars($car['name']) ?></h2>
+                <a href="enquiry.php?car=<?= urlencode($car['name']) ?>" class="enquire-button">Enquire Now</a>
             </div>
         <?php endforeach; ?>
     </div>
