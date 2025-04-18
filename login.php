@@ -32,21 +32,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body class="login-body">
 
-    <h2>Login</h2>
+    <div class="login-container">
+        <h2>Login</h2>
 
-    <?php if (isset($error)): ?>
-        <p style="color: red;"><?= htmlspecialchars(string: $error) ?></p>
-    <?php endif; ?>
+        <?php if (isset($error)): ?>
+            <p style="color: red;"><?= htmlspecialchars($error) ?></p>
+        <?php endif; ?>
 
-    <form method="post">
-        <input type="text" name="username" placeholder="Username" required><br>
-        <input type="password" name="password" placeholder="Password" required><br>
-        <button type="submit">Login</button>
-    </form>
+        <form method="post">
+            <input type="text" name="username" placeholder="Username" required><br>
+            <input type="password" name="password" placeholder="Password" required><br>
+            <button type="submit" class="submit-button">Login</button>
+        </form>
 
-    <p>Don't have an account? <a href="signup.php">Sign Up</a></p>
+        <p>Don't have an account? <a href="signup.php">Sign Up</a></p>
+    </div>
 
 </body>
 

@@ -4,13 +4,89 @@
     box-sizing: border-box;
 }
 
-
 body {
     font-family: Arial, sans-serif;
     background-color: #f5f5f5;
     color: #333;
     text-align: center;
     line-height: 1.6;
+}
+
+body.login-body,
+body.enquiry-body {
+    background: url("https://images.pexels.com/photos/8060364/pexels-photo-8060364.jpeg?cs=srgb&dl=pexels-wearelivingart-8060364.jpg&fm=jpg") no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-container,
+.enquiry-container {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    max-width: 450px;
+    width: 100%;
+    text-align: center;
+}
+
+.login-container h2,
+.enquiry-container h1 {
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 26px;
+}
+
+input,
+.login-container input,
+.enquiry-container input[type="text"],
+.enquiry-container input[type="email"],
+.enquiry-container input[type="tel"] {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border 0.3s ease;
+    display: block;
+    box-sizing: border-box;
+}
+
+input:focus {
+    border-color: black;
+    outline: none;
+}
+
+.submit-button,
+input[type="submit"],
+button[type="submit"] {
+    width: 100%;
+    background-color: black;
+    color: white;
+    padding: 12px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.submit-button:hover,
+input[type="submit"]:hover,
+button[type="submit"]:hover {
+    background-color: #444;
+    transform: scale(1.05);
+}
+
+.login-container a {
+    color: #333;
+    text-decoration: underline;
+    font-weight: bold;
 }
 
 .header {
@@ -34,7 +110,7 @@ body {
     display: flex;
     justify-content: center;
     gap: 15px;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
 }
 
 .menu-button {
@@ -51,10 +127,9 @@ body {
     background-color: #555;
 }
 
-
 .car-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 20px;
     max-width: 1200px;
     margin: 20px auto;
@@ -79,8 +154,8 @@ body {
     max-width: 100%;
     height: auto;
     border-radius: 5px;
-    display: block;
     margin: 0 auto 10px;
+    display: block;
 }
 
 .car-item h2 {
@@ -104,47 +179,9 @@ body {
     transform: scale(1.05);
 }
 
-.enquiry-container {
-    background: white;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
-    text-align: center;
-    max-width: 450px;
-    width: 100%;
-    margin: 40px auto;
-}
-
-input {
-    width: 100%;
-    padding: 12px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-    transition: border 0.3s ease;
+.enquiry-container label {
     display: block;
-}
-
-input:focus {
-    border-color: black;
-    outline: none;
-}
-
-.submit-button {
-    width: 100%;
-    background-color: black;
-    color: white;
-    padding: 12px;
-    border-radius: 5px;
-    font-size: 16px;
+    text-align: left;
     font-weight: bold;
-    cursor: pointer;
-    border: none;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.submit-button:hover {
-    background-color: #444;
-    transform: scale(1.05);
+    margin-top: 10px;
 }
