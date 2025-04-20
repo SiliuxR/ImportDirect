@@ -186,7 +186,16 @@ body.login-body {
 }
 
 body.signup-body {
-    background: url("https://i.ytimg.com/vi/GW3mBgxdsCU/maxresdefault.jpg") no-repeat center center fixed;
+    background: url("https://c4.wallpaperflare.com/wallpaper/849/660/940/nissan-skyline-nissan-skyline-r32-nissan-gt-r-r32-wallpaper-preview.jpg") no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body.enquiry-body {
+    background: url("https://preview.redd.it/pyeaey8grcc61.jpg?width=640&crop=smart&auto=webp&s=8d399a2eaa013777121fc217e1b13d5361b89fbf") no-repeat center center fixed;
     background-size: cover;
     height: 100vh;
     display: flex;
