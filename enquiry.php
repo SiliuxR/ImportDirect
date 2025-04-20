@@ -1,3 +1,7 @@
+<?php
+$carName = isset($_GET['car']) ? $_GET['car'] : 'Unknown Car';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,27 +12,30 @@
 </head>
 
 <body class="enquiry-body">
-
     <div class="enquiry-container">
         <h1>Enquiry Form</h1>
-
         <form action="submit-enquiry.php" method="POST">
-            <label>First Name:</label>
-            <input type="text" name="first_name" required>
+            <input type="hidden" name="car" value="<?= htmlspecialchars($carName) ?>">
 
-            <label>Last Name:</label>
-            <input type="text" name="last_name" required>
+            <label>First Name:
+                <input type="text" name="first_name" required>
+            </label>
 
-            <label>Email:</label>
-            <input type="email" name="email" required>
+            <label>Last Name:
+                <input type="text" name="last_name" required>
+            </label>
 
-            <label>Phone:</label>
-            <input type="tel" name="phone" required>
+            <label>Email:
+                <input type="email" name="email" required>
+            </label>
+
+            <label>Phone:
+                <input type="tel" name="phone" required>
+            </label>
 
             <input type="submit" value="Submit Enquiry" class="submit-button">
         </form>
     </div>
-
 </body>
 
 </html>

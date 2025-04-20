@@ -41,7 +41,6 @@ body {
     width: 32px;
     height: 32px;
     cursor: pointer;
-    transition: transform 0.2s ease;
 }
 
 .account-icon img:hover {
@@ -85,7 +84,6 @@ body {
     padding: 15px;
     text-align: center;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease;
 }
 
 .car-item:hover {
@@ -186,7 +184,7 @@ body.login-body {
 }
 
 body.signup-body {
-    background: url("https://c4.wallpaperflare.com/wallpaper/849/660/940/nissan-skyline-nissan-skyline-r32-nissan-gt-r-r32-wallpaper-preview.jpg") no-repeat center center fixed;
+    background: url("https://images.unsplash.com/photo-1605907153179-8b364644a241?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8amRtfGVufDB8fDB8fHww") no-repeat center center fixed;
     background-size: cover;
     height: 100vh;
     display: flex;
@@ -195,7 +193,7 @@ body.signup-body {
 }
 
 body.enquiry-body {
-    background: url("https://preview.redd.it/pyeaey8grcc61.jpg?width=640&crop=smart&auto=webp&s=8d399a2eaa013777121fc217e1b13d5361b89fbf") no-repeat center center fixed;
+    background: url("https://images.pexels.com/photos/8060364/pexels-photo-8060364.jpeg?cs=srgb&dl=pexels-wearelivingart-8060364.jpg&fm=jpg") no-repeat center center fixed;
     background-size: cover;
     height: 100vh;
     display: flex;
@@ -231,4 +229,76 @@ body.enquiry-body {
     color: #333;
     text-decoration: underline;
     font-weight: bold;
+}
+
+body.enquiries-body {
+    background: url("https://www.hdwallpapers.in/download/mitsubishi_blue_jdm_car_4k_hd_jdm-HD.jpg") no-repeat center center fixed;
+    background-size: cover;
+    padding: 60px 20px;
+    font-family: Arial, sans-serif;
+    color: #333;
+    min-height: 100vh;
+}
+
+.enquiry-list {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 800px;
+    margin: auto;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    text-align: left;
+}
+
+.enquiry-list h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #222;
+}
+
+.enquiry-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.enquiry-list li {
+    background: #f9f9f9;
+    margin: 15px 0;
+    padding: 15px 20px;
+    border-left: 5px solid #333;
+    border-radius: 6px;
+    position: relative;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.delete-button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.delete-button:hover {
+    background-color: darkred;
+}
+
+.return-home {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.return-home:hover {
+    background-color: #555;
+    transform: scale(1.05);
 }
