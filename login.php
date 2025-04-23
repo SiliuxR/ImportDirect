@@ -35,7 +35,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <body class="login-body">
 
     <div class="login-container">
-        <h2>Login</h2>
+        <h2>Welcome to ImportDirectJDM</h2>
 
         <?php if (isset($error)): ?>
             <p style="color: red;"><?= htmlspecialchars($error) ?></p>
