@@ -8,7 +8,7 @@
 
 <body>
     <?php
-    $carName = "2009 Nissan  GT-R";
+    $carName = "2009 Nissan GT-R";
     $carImage = "https://m.atcdn.co.uk/a/media/w1024/5b0d5adbf82d48b3bfbe481dd947b313.jpg";
     $year = 2009;
     $fuelType = "Petrol";

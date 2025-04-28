@@ -7,43 +7,44 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $password = $_POST["password"];
 
     if (!empty($username) && !empty($password)) {
-        $stmt = $pdo->prepare(query: "SELECT * FROM users WHERE username = ?");
-        $stmt->execute(params: [$username]);
-        $user = $stmt->fetch(mode: PDO::FETCH_ASSOC);
+        $stmt = $pdo->prepare("SELECT * FROM users WHERE username = ?");
+        $stmt->execute([$username]);
+        $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
-        if ($user && password_verify(password: $password, hash: $user["password_hash"])) {
+        if ($user && password_verify($password, $user["password_hash"])) {
             $_SESSION["user"] = $user["username"];
-            header(header: "Location: index.php");
+            header("Location: index.php");
             exit();
         } else {
-            $error = "Invalid username or password!";
+            $error = "Invalid username or password.";
         }
     } else {
-        $error = "All fields are required!";
+        $error = "Please fill in all fields.";
     }
 }
 ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>Login</title>
+    <meta charset="UTF-8">
+    <title>Login - Import Direct JDM</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body class="login-body">
 
     <div class="login-container">
-        <h2>Welcome to ImportDirectJDM</h2>
+        <h2>Welcome to Import Direct JDM</h2>
 
         <?php if (isset($error)): ?>
             <p style="color: red;"><?= htmlspecialchars($error) ?></p>
         <?php endif; ?>
 
-        <form method="post">
-            <input type="text" name="username" placeholder="Username" required><br>
-            <input type="password" name="password" placeholder="Password" required><br>
+        <form method="POST">
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="password" name="password" placeholder="Password" required>
             <button type="submit" class="submit-button">Login</button>
         </form>
 

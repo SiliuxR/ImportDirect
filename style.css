@@ -16,7 +16,6 @@ body {
     background-color: #333;
     padding: 20px;
     color: white;
-    text-align: center;
 }
 
 .logo-banner h1 {
@@ -24,7 +23,7 @@ body {
 }
 
 .menu-container {
-    background-color: #f8f8f8;
+    background-color: #f5f5f5;
     padding: 15px;
     margin-bottom: 20px;
 }
@@ -41,6 +40,7 @@ body {
     width: 32px;
     height: 32px;
     cursor: pointer;
+    transition: transform 0.2s;
 }
 
 .account-icon img:hover {
@@ -60,8 +60,8 @@ body {
     background-color: #333;
     padding: 12px 18px;
     border-radius: 5px;
-    transition: 0.3s;
     font-weight: bold;
+    transition: 0.3s;
 }
 
 .menu-button:hover {
@@ -83,7 +83,7 @@ body {
     border-radius: 8px;
     padding: 15px;
     text-align: center;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 2px 2px 10px #ccc;
 }
 
 .car-item:hover {
@@ -94,8 +94,7 @@ body {
     max-width: 100%;
     height: auto;
     border-radius: 5px;
-    display: block;
-    margin: 0 auto 10px;
+    margin-bottom: 10px;
 }
 
 .car-item h2 {
@@ -111,7 +110,7 @@ body {
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    transition: 0.3s;
 }
 
 .enquire-button:hover {
@@ -123,11 +122,11 @@ body {
     background: white;
     padding: 30px;
     border-radius: 10px;
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
-    text-align: center;
+    box-shadow: 0 5px 10px #ccc;
     max-width: 450px;
     width: 100%;
     margin: 40px auto;
+    text-align: center;
 }
 
 .enquiry-container label {
@@ -139,14 +138,14 @@ body {
 
 .enquiry-container input[type="text"],
 .enquiry-container input[type="email"],
-.enquiry-container input[type="tel"] {
+.enquiry-container input[type="tel"],
+.enquiry-container input[type="password"] {
     width: 100%;
     padding: 12px;
     margin: 8px 0 16px;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 16px;
-    box-sizing: border-box;
 }
 
 .enquiry-container input[type="submit"],
@@ -158,9 +157,9 @@ body {
     border-radius: 5px;
     font-size: 16px;
     font-weight: bold;
-    cursor: pointer;
     border: none;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    transition: 0.3s;
+    cursor: pointer;
 }
 
 .enquiry-container input[type="submit"]:hover,
@@ -173,6 +172,7 @@ input:focus {
     border-color: black;
     outline: none;
 }
+
 
 body.login-body {
     background: url("https://i.pinimg.com/originals/30/5f/f2/305ff202eb5608a643203d99ccc0925c.gif") no-repeat center center fixed;
@@ -201,11 +201,19 @@ body.enquiry-body {
     align-items: center;
 }
 
+body.enquiries-body {
+    background: url("https://www.hdwallpapers.in/download/mitsubishi_blue_jdm_car_4k_hd_jdm-HD.jpg") no-repeat center center fixed;
+    background-size: cover;
+    padding: 60px 20px;
+    min-height: 100vh;
+}
+
+
 .login-container {
-    background: rgba(255, 255, 255, 0.95);
+    background: white;
     padding: 40px;
     border-radius: 12px;
-    box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 8px 20px #ccc;
     max-width: 400px;
     width: 100%;
     text-align: center;
@@ -231,29 +239,20 @@ body.enquiry-body {
     font-weight: bold;
 }
 
-body.enquiries-body {
-    background: url("https://www.hdwallpapers.in/download/mitsubishi_blue_jdm_car_4k_hd_jdm-HD.jpg") no-repeat center center fixed;
-    background-size: cover;
-    padding: 60px 20px;
-    font-family: Arial, sans-serif;
-    color: #333;
-    min-height: 100vh;
-}
 
 .enquiry-list {
-    background: rgba(255, 255, 255, 0.95);
+    background: white;
     padding: 30px;
     border-radius: 10px;
     max-width: 800px;
     margin: auto;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 20px #ccc;
     text-align: left;
 }
 
 .enquiry-list h2 {
     text-align: center;
     margin-bottom: 20px;
-    color: #222;
 }
 
 .enquiry-list ul {
@@ -267,10 +266,10 @@ body.enquiries-body {
     padding: 15px 20px;
     border-left: 5px solid #333;
     border-radius: 6px;
-    position: relative;
     font-size: 15px;
     line-height: 1.6;
 }
+
 
 .delete-button {
     background-color: red;

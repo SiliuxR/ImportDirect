@@ -2,26 +2,26 @@
 require 'db_connection.php';
 session_start();
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $username = trim($_POST["username"]);
     $email = trim($_POST["email"]);
     $password = $_POST["password"];
 
     if (!empty($username) && !empty($email) && !empty($password)) {
-        $password_hash = password_hash($password, PASSWORD_DEFAULT);
+        $passwordHash = password_hash($password, PASSWORD_DEFAULT);
 
         try {
             $stmt = $pdo->prepare("INSERT INTO users (username, email, password_hash) VALUES (?, ?, ?)");
-            $stmt->execute([$username, $email, $password_hash]);
+            $stmt->execute([$username, $email, $passwordHash]);
 
             $_SESSION["user"] = $username;
             header("Location: index.php");
             exit();
         } catch (PDOException $e) {
-            $error = "Signup failed: " . $e->getMessage();
+            $error = "Signup failed.";
         }
     } else {
-        $error = "All fields are required!";
+        $error = "All fields are required.";
     }
 }
 ?>

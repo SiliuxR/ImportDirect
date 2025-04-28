@@ -14,6 +14,7 @@ $carName = isset($_GET['car']) ? $_GET['car'] : 'Unknown Car';
 <body class="enquiry-body">
     <div class="enquiry-container">
         <h1>Enquiry Form</h1>
+
         <form action="submit-enquiry.php" method="POST">
             <input type="hidden" name="car" value="<?= htmlspecialchars($carName) ?>">
 
