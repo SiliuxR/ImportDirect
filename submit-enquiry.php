@@ -1,6 +1,6 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    $car = isset($_POST["car"]) ? $_POST["car"] : "Unknown Car";
+    $car = isset($_POST["car"]) ? $_POST["car"] : "Bleh";
     $firstName = $_POST["first_name"] ?? "";
     $lastName = $_POST["last_name"] ?? "";
     $email = $_POST["email"] ?? "";
